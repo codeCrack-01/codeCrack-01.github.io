@@ -72,7 +72,7 @@ export default function Hero() {
         <div class="grid lg:grid-cols-5 gap-8 items-center">
           {/* ASCII Art */}
           <div class="lg:col-span-2 hidden lg:block">
-            <pre class="text-orange text-[0.55rem] leading-tight font-mono select-none opacity-80">
+            <pre class="text-orange text-[0.4rem] leading-tight font-mono select-none opacity-80">
               {personal.ascii.join("\n")}
             </pre>
           </div>
@@ -86,7 +86,7 @@ export default function Hero() {
               <span class="text-muted text-xs font-mono ml-2">zain@portfolio — bash</span>
             </div>
             <div class="p-6 md:p-8 font-mono text-sm space-y-1.5">
-              <div class="text-muted">user@portfolio:~$ <span class="text-cream">neofetch</span></div>
+              <div class="text-muted">user@portfolio:~$ <span class="text-cream">fastfetch</span></div>
               <div class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-1 text-xs md:text-sm mt-3">
                 <span class="text-orange">OS</span>
                 <span class="text-cream">Fedora Linux 40 x86_64</span>

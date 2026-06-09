@@ -3,21 +3,21 @@
 @tailwind utilities;
 
 body {
-  background-color: #252422;
-  color: #fffcf2;
+  background-color: #22223b;
+  color: #f2e9e4;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 ::selection {
-  background: #eb5e28;
-  color: #252422;
+  background: #9a8c98;
+  color: #22223b;
 }
 
 ::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #403d39; }
-::-webkit-scrollbar-thumb { background: #403d39; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: #eb5e28; }
+::-webkit-scrollbar-track { background: #4a4e69; }
+::-webkit-scrollbar-thumb { background: #4a4e69; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #9a8c98; }
 
 .noise {
   position: fixed;
@@ -32,8 +32,8 @@ body {
 .grid-bg {
   background-size: 40px 40px;
   background-image:
-    linear-gradient(to right, rgba(255, 252, 242, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 252, 242, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(242, 233, 228, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(242, 233, 228, 0.03) 1px, transparent 1px);
   mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
 }
 
@@ -43,7 +43,7 @@ body {
 
 .project-card:hover {
   transform: translateY(-2px);
-  border-color: rgba(235, 94, 40, 0.3);
+  border-color: rgba(154, 140, 152, 0.3);
 }
 
 .card-glow {
@@ -52,7 +52,7 @@ body {
   border-radius: 0.75rem;
   opacity: 0;
   transition: opacity 0.3s;
-  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(235, 94, 40, 0.1), transparent 40%);
+  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(154, 140, 152, 0.1), transparent 40%);
   z-index: 1;
   pointer-events: none;
 }
@@ -76,7 +76,7 @@ body {
   display: inline-block;
   width: 8px;
   height: 1.2em;
-  background-color: #eb5e28;
+  background-color: #9a8c98;
   animation: blink 1s step-end infinite;
   vertical-align: text-bottom;
   margin-left: 2px;
@@ -88,25 +88,25 @@ body {
 }
 
 .status-dot {
-  box-shadow: 0 0 0 0 rgba(235, 94, 40, 0.5);
-  animation: pulse-orange 2s infinite;
+  box-shadow: 0 0 0 0 rgba(154, 140, 152, 0.5);
+  animation: pulse-accent 2s infinite;
 }
 
-@keyframes pulse-orange {
-  0% { box-shadow: 0 0 0 0 rgba(235, 94, 40, 0.5); }
-  70% { box-shadow: 0 0 0 6px rgba(235, 94, 40, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(235, 94, 40, 0); }
+@keyframes pulse-accent {
+  0% { box-shadow: 0 0 0 0 rgba(154, 140, 152, 0.5); }
+  70% { box-shadow: 0 0 0 6px rgba(154, 140, 152, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(154, 140, 152, 0); }
 }
 
 .neofetch-card {
-  border: 1px solid #403d39;
+  border: 1px solid #9a8c98;
   border-radius: 0.75rem;
   overflow: hidden;
 }
 
 .neofetch-header {
-  background: #403d39;
-  border-bottom: 1px solid #403d39;
+  background: #4a4e69;
+  border-bottom: 1px solid #9a8c98;
   padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
@@ -123,15 +123,15 @@ body {
   display: inline-block;
   padding: 0.125rem 0.5rem;
   font-size: 0.6875rem;
-  border: 1px solid #403d39;
+  border: 1px solid #9a8c98;
   border-radius: 0.25rem;
-  color: #ccc5b9;
+  color: #c9ada7;
   transition: border-color 0.2s, color 0.2s;
 }
 
 .tag:hover {
-  border-color: rgba(235, 94, 40, 0.4);
-  color: #eb5e28;
+  border-color: rgba(154, 140, 152, 0.4);
+  color: #9a8c98;
 }
 
 .section-label {
@@ -141,7 +141,7 @@ body {
   font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #eb5e28;
+  color: #9a8c98;
   font-family: 'JetBrains Mono', monospace;
 }
 
@@ -149,5 +149,5 @@ body {
   content: '';
   flex: 1;
   height: 1px;
-  background: #403d39;
+  background: #9a8c98;
 }

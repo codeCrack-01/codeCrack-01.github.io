@@ -152,8 +152,8 @@ export default function Hero() {
           </div>
           <div class="w-px bg-border" />
           <div>
-            <div class="text-2xl font-sans font-bold text-cream">8<span class="text-orange text-base">+</span></div>
-            <div class="text-[10px] text-muted tracking-widest mt-1 uppercase font-mono">Projects</div>
+            <div class="text-2xl font-sans font-bold text-cream">60<span class="text-orange text-base">+</span></div>
+            <div class="text-[10px] text-muted tracking-widest mt-1 uppercase font-mono">Repos</div>
           </div>
         </div>
       </div>

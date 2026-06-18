@@ -125,7 +125,7 @@ export default function Hero() {
           <div class="w-px bg-border" />
           <div>
             <div class="text-2xl font-sans font-bold text-ink">
-              60<span class="text-accent text-base">+</span>
+              40<span class="text-accent text-base">+</span>
             </div>
             <div class="text-[10px] text-muted tracking-widest mt-1 uppercase font-mono">
               Repos

@@ -3,7 +3,7 @@ export const personal = {
   email: "program01code@gmail.com",
   phone: "0300-9647682",
   github: "https://github.com/codeCrack-01",
-  linkedin: "www.linkedin.com/in/zain-ahmed-27a848381",
+  linkedin: "https://linkedin.com/in/zain-ahmed-27a848381",
   cgpa: "3.806",
   university: "LUMS",
   degree: "BS Computer Science",

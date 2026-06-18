@@ -1,6 +1,11 @@
 import { createSignal, onMount } from "solid-js";
 import { projects } from "../data/portfolio";
 
+const statusColors = {
+  LIVE: { bg: "bg-blue-600", text: "text-blue-600", border: "border-blue-600/30", fill: "bg-blue-600/5" },
+  API: { bg: "bg-indigo-800", text: "text-indigo-800", border: "border-indigo-800/30", fill: "bg-indigo-800/5" },
+};
+
 function ProjectCard(props) {
   let cardRef;
   const [visible, setVisible] = createSignal(false);
@@ -13,6 +18,8 @@ function ProjectCard(props) {
     if (cardRef) observer.observe(cardRef);
   });
 
+  const sc = statusColors[props.project.status] || { bg: "bg-accent", text: "text-accent", border: "border-accent/30", fill: "bg-accent/5" };
+
   return (
     <div
       ref={cardRef}
@@ -24,8 +31,8 @@ function ProjectCard(props) {
           <h3 class="font-sans text-lg font-bold text-ink">{props.project.title}</h3>
           <p class="text-muted text-xs mt-0.5">{props.project.subtitle}</p>
         </div>
-        <span class="whitespace-nowrap px-2.5 py-1 text-[10px] border border-accent/30 text-accent rounded-full bg-accent/5 flex items-center gap-1.5">
-          <span class="w-1.5 h-1.5 rounded-full bg-accent" />
+        <span class={`whitespace-nowrap px-2.5 py-1 text-[10px] ${sc.border} ${sc.text} ${sc.fill} rounded-full flex items-center gap-1.5`}>
+          <span class={`w-1.5 h-1.5 rounded-full ${sc.bg}`} />
           {props.project.status}
         </span>
       </div>

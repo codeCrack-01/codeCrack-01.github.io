@@ -64,9 +64,9 @@ export default function Stack() {
                 <li class="text-xs text-muted font-mono flex gap-2">
                   <span class="text-accent shrink-0">▹</span>
                   <span>
-                    {r.includes("coursera.org") ? (
+                    {/https?:\/\/[^\s]+/.test(r) ? (
                       <a
-                        href={r.match(/https?:\/\/[^\s]+/)?.[0] || "#"}
+                        href={r.match(/https?:\/\/[^\s]+/)[0]}
                         target="_blank"
                         class="hover:text-accent underline underline-offset-2"
                       >

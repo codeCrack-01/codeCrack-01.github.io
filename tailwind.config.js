@@ -13,7 +13,7 @@ export default {
         border: "#E4E4E7",
         muted: "#71717A",
         ink: "#18181B",
-        accent: "#2C3E50",
+        accent: "#3D3D6B",
       },
       boxShadow: {
         island: "0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04)",

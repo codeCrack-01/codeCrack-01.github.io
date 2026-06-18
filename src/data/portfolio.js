@@ -64,11 +64,12 @@ export const projects = [
     url: "https://softecaihack-3e2pwy7vc4g7k94ehjghsq.streamlit.app/",
   },
   {
-    title: "Poultry Shed IoT Monitor",
-    subtitle: "Agricultural Environmental Monitoring",
-    tags: ["ESP32-C3", "Arduino", "3-bit Parallel Bus"],
-    desc: "Developed a localized environmental monitoring system for agricultural optimization utilizing microcontrollers and custom sensor arrays. Engineered a 3-bit parallel bus interface and real-time backend telemetry loop to stream status alerts.",
-    status: "SYSTEMS",
+    title: "FastAPI + SolidJS + Auth0 Boilerplate",
+    subtitle: "Authentication Starter Kit",
+    tags: ["FastAPI", "SolidJS", "Auth0", "TypeScript", "Python"],
+    desc: "A production-ready boilerplate for scaffolding Auth0 authentication with a FastAPI backend and SolidJS frontend. Features JWT validation, protected API routes, token-based access, and a responsive Bootstrap UI. Designed for rapid project bootstrap.",
+    status: "TEMPLATE",
+    github: "https://github.com/codeCrack-01/fastapi_solid-js_auth0_authentication",
   },
   {
     title: "Expense Tracker",
@@ -119,6 +120,10 @@ export const freelance = {
   bullets: [
     "Architecting robust, high-throughput APIs using FastAPI and integrating advanced AI automation workflows for global clients.",
     "Delivering production-grade backend solutions with emphasis on scalability, reliability, and clean architecture.",
+  ],
+  links: [
+    { label: "FastAPI Backend Gig", url: "https://www.fiverr.com/s/qDmV7qy" },
+    { label: "AI Automation Gig", url: "https://www.fiverr.com/s/bdVgrYm" },
   ],
 };
 
@@ -177,7 +182,7 @@ export const skills = {
 export const recognition = [
   "1st Position Overall — NASA Space Apps Competition (Local Region, UMT Lahore)",
   "IBM Git & GitHub Certification — https://coursera.org/share/9824efc9aeae0a2b044339d5a11722e7",
-  "Udemy — Java Networking: TCP/UDP client-server applications",
+  "Udemy — Java Networking: TCP/UDP client-server applications — https://www.udemy.com/certificate/UC-face6696-f33c-4a72-92d0-239eb723c25d/",
   "National Robotics Engineering Competition (NERC 2026) — Active Competitor",
   `CGPA: ${personal.cgpa}/4.0 @ ${personal.university}`,
 ];

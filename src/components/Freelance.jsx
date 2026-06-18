@@ -42,6 +42,15 @@ export default function Freelance() {
                 </li>
               ))}
             </ul>
+            {freelance.links && (
+              <div class="flex gap-4 pt-2">
+                {freelance.links.map((link) => (
+                  <a href={link.url} target="_blank" class="text-xs text-muted hover:text-accent flex items-center gap-1 transition-colors">
+                    {link.label} <span class="text-lg leading-none">↗</span>
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>

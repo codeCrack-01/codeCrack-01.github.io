@@ -8,12 +8,17 @@ export default {
         sans: ['"Space Grotesk"', "sans-serif"],
       },
       colors: {
-        bg: "#252422",
-        surface: "#403d39",
-        border: "#403d39",
-        muted: "#ccc5b9",
-        cream: "#fffcf2",
-        orange: "#eb5e28",
+        bg: "#F5F5F7",
+        surface: "#FFFFFF",
+        border: "#E4E4E7",
+        muted: "#71717A",
+        ink: "#18181B",
+        accent: "#2C3E50",
+      },
+      boxShadow: {
+        island: "0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04)",
+        "island-lg":
+          "0 4px 16px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04)",
       },
     },
   },

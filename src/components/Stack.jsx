@@ -1,5 +1,5 @@
 import { createSignal, onMount } from "solid-js";
-import { skills, recognition, education } from "../data/portfolio";
+import { skills, recognition, education, researchInterests } from "../data/portfolio";
 
 function SkillCard(props) {
   let cardRef;
@@ -15,13 +15,13 @@ function SkillCard(props) {
   return (
     <div
       ref={cardRef}
-      class="bg-surface border border-border p-6 rounded-xl"
+      class="bg-surface border border-border/60 rounded-2xl shadow-island p-6"
       classList={{ reveal: true, active: visible() }}
     >
-      <h4 class="text-orange text-xs tracking-widest mb-4 uppercase font-mono">{props.category}</h4>
+      <h4 class="text-accent text-xs tracking-widest mb-4 uppercase font-mono">{props.category}</h4>
       <div class="flex flex-wrap gap-2">
         {props.items.map((item) => (
-          <span class="px-2.5 py-1 bg-bg border border-border rounded text-xs text-muted hover:border-orange/40 hover:text-cream transition-colors">
+          <span class="px-2.5 py-1 bg-bg border border-border rounded text-xs text-muted hover:border-accent/40 hover:text-accent transition-colors">
             {item}
           </span>
         ))}
@@ -44,10 +44,7 @@ export default function Stack() {
   return (
     <section id="stack" class="py-24">
       <div class="max-w-6xl mx-auto px-6">
-        <div class="flex items-center gap-4 mb-12">
-          <span class="text-orange text-xs tracking-[0.2em] uppercase font-mono">Tech Stack</span>
-          <div class="h-px flex-1 bg-border" />
-        </div>
+        <div class="section-label mb-10">Tech Stack</div>
 
         <div
           ref={sectionRef}
@@ -59,33 +56,52 @@ export default function Stack() {
           ))}
         </div>
 
-        {/* Recognition */}
-        <div class="mt-12 bg-surface border border-border rounded-xl p-8">
-          <h4 class="text-orange text-xs tracking-widest mb-6 uppercase font-mono">Recognition & Education</h4>
-          <div class="grid md:grid-cols-2 gap-8">
-            <div>
-              <h5 class="text-cream text-sm font-bold mb-3 font-sans">Recognition</h5>
-              <ul class="space-y-3">
-                {recognition.map((r) => (
-                  <li class="text-xs text-muted font-mono flex gap-2">
-                    <span class="text-orange shrink-0">▹</span>
-                    {r}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h5 class="text-cream text-sm font-bold mb-3 font-sans">Education</h5>
-              <ul class="space-y-4">
-                {education.map((e) => (
-                  <li>
-                    <p class="text-xs text-cream font-bold font-sans">{e.institution}</p>
-                    <p class="text-xs text-muted mt-0.5 font-mono">{e.degree} · {e.period}</p>
-                    <p class="text-xs text-orange mt-0.5 font-mono">{e.detail}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
+        <div class="mt-8 grid md:grid-cols-2 gap-5">
+          <div class="bg-surface border border-border/60 rounded-2xl shadow-island p-8">
+            <h4 class="text-accent text-xs tracking-widest mb-6 uppercase font-mono">Recognition</h4>
+            <ul class="space-y-3">
+              {recognition.map((r) => (
+                <li class="text-xs text-muted font-mono flex gap-2">
+                  <span class="text-accent shrink-0">▹</span>
+                  <span>
+                    {r.includes("coursera.org") ? (
+                      <a
+                        href={r.match(/https?:\/\/[^\s]+/)?.[0] || "#"}
+                        target="_blank"
+                        class="hover:text-accent underline underline-offset-2"
+                      >
+                        {r.replace(/ — https?:\/\/[^\s]+/, "")}
+                      </a>
+                    ) : (
+                      r
+                    )}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="bg-surface border border-border/60 rounded-2xl shadow-island p-8">
+            <h4 class="text-accent text-xs tracking-widest mb-6 uppercase font-mono">Education</h4>
+            <ul class="space-y-5">
+              {education.map((e) => (
+                <li>
+                  <p class="text-sm text-ink font-bold font-sans">{e.institution}</p>
+                  <p class="text-xs text-muted mt-0.5 font-mono">{e.degree} · {e.period}</p>
+                  {e.detail && <p class="text-xs text-accent mt-0.5 font-mono">{e.detail}</p>}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-8 bg-surface border border-border/60 rounded-2xl shadow-island p-8">
+          <h4 class="text-accent text-xs tracking-widest mb-5 uppercase font-mono">Research Interests</h4>
+          <div class="flex flex-wrap gap-2">
+            {researchInterests.map((interest) => (
+              <span class="px-3 py-1.5 bg-bg border border-border rounded text-xs text-muted hover:border-accent/40 hover:text-accent transition-colors">
+                {interest}
+              </span>
+            ))}
           </div>
         </div>
       </div>

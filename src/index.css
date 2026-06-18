@@ -3,21 +3,21 @@
 @tailwind utilities;
 
 body {
-  background-color: #252422;
-  color: #fffcf2;
+  background-color: #F5F5F7;
+  color: #18181B;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 ::selection {
-  background: #eb5e28;
-  color: #252422;
+  background: #2C3E50;
+  color: #FFFFFF;
 }
 
 ::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #403d39; }
-::-webkit-scrollbar-thumb { background: #403d39; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: #eb5e28; }
+::-webkit-scrollbar-track { background: #E4E4E7; }
+::-webkit-scrollbar-thumb { background: #D4D4D8; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #2C3E50; }
 
 .noise {
   position: fixed;
@@ -25,46 +25,25 @@ body {
   width: 100%; height: 100%;
   pointer-events: none;
   z-index: 50;
-  opacity: 0.02;
+  opacity: 0.012;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
-.grid-bg {
-  background-size: 40px 40px;
-  background-image:
-    linear-gradient(to right, rgba(255, 252, 242, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 252, 242, 0.03) 1px, transparent 1px);
-  mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+.island-card {
+  background: #FFFFFF;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s ease;
 }
 
-.project-card {
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(235, 94, 40, 0.3);
-}
-
-.card-glow {
-  position: absolute;
-  inset: 0;
-  border-radius: 0.75rem;
-  opacity: 0;
-  transition: opacity 0.3s;
-  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(235, 94, 40, 0.1), transparent 40%);
-  z-index: 1;
-  pointer-events: none;
-}
-
-.project-card:hover .card-glow {
-  opacity: 1;
+.island-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04);
 }
 
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
-  transition: all 0.7s cubic-bezier(0.5, 0, 0, 1);
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.5, 0, 0, 1);
 }
 
 .reveal.active {
@@ -76,7 +55,7 @@ body {
   display: inline-block;
   width: 8px;
   height: 1.2em;
-  background-color: #eb5e28;
+  background-color: #2C3E50;
   animation: blink 1s step-end infinite;
   vertical-align: text-bottom;
   margin-left: 2px;
@@ -87,61 +66,14 @@ body {
   50% { opacity: 0; }
 }
 
-.status-dot {
-  box-shadow: 0 0 0 0 rgba(235, 94, 40, 0.5);
-  animation: pulse-orange 2s infinite;
-}
-
-@keyframes pulse-orange {
-  0% { box-shadow: 0 0 0 0 rgba(235, 94, 40, 0.5); }
-  70% { box-shadow: 0 0 0 6px rgba(235, 94, 40, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(235, 94, 40, 0); }
-}
-
-.neofetch-card {
-  border: 1px solid #403d39;
-  border-radius: 0.75rem;
-  overflow: hidden;
-}
-
-.neofetch-header {
-  background: #403d39;
-  border-bottom: 1px solid #403d39;
-  padding: 0.5rem 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.neofetch-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-
-.tag {
-  display: inline-block;
-  padding: 0.125rem 0.5rem;
-  font-size: 0.6875rem;
-  border: 1px solid #403d39;
-  border-radius: 0.25rem;
-  color: #ccc5b9;
-  transition: border-color 0.2s, color 0.2s;
-}
-
-.tag:hover {
-  border-color: rgba(235, 94, 40, 0.4);
-  color: #eb5e28;
-}
-
 .section-label {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  font-size: 0.75rem;
+  gap: 0.75rem;
+  font-size: 0.7rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #eb5e28;
+  color: #2C3E50;
   font-family: 'JetBrains Mono', monospace;
 }
 
@@ -149,5 +81,5 @@ body {
   content: '';
   flex: 1;
   height: 1px;
-  background: #403d39;
+  background: #E4E4E7;
 }

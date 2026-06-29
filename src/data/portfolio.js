@@ -21,6 +21,14 @@ export const personal = {
 
 export const projects = [
   {
+    title: "Overleaf MCP",
+    subtitle: "MCP Server for LaTeX Paper Management",
+    tags: ["FastAPI", "Python", "MCP", "LaTeX", "Git"],
+    desc: "Built an MCP (Model Context Protocol) server that enables LLM agents like Claude Code to read and update Overleaf LaTeX papers via git. Exposes tools for reading/writing paper content and bibliographies with automatic LaTeX compilation, git commit, and push workflows.",
+    status: "API",
+    github: "https://github.com/codeCrack-01/overleaf_mcp",
+  },
+  {
     title: "Jotted",
     subtitle: "Note-Taking Application",
     tags: ["Ruby on Rails", "IndexedDB", "PWA"],
@@ -95,6 +103,14 @@ export const projects = [
     desc: "Top-down survival game with collision detection, raycasting, sprite animation, and entity state management. Built from scratch in C++ using SDL2.",
     status: "SYSTEMS",
     url: "https://hi-tech-developerz.itch.io/shot-dead",
+  },
+  {
+    title: "Zed Jinja2 HTML",
+    subtitle: "Zed Extension for Jinja2 Template Support",
+    tags: ["Zed", "Python", "LSP", "Jinja2", "HTML", "WASM"],
+    desc: "Building a Zed IDE extension that provides Jinja2 HTML template support through an LSP-based language server with auto-completion, diagnostics, hover documentation, and Emmet snippets. The Python LSP server wraps pygls and the extension compiles to WASM.",
+    status: "IN PROGRESS",
+    github: "https://github.com/codeCrack-01/zed-jinja2-html",
   },
 ];
 

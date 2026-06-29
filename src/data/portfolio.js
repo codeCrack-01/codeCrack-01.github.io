@@ -29,13 +29,13 @@ export const projects = [
     github: "https://github.com/codeCrack-01/overleaf_mcp",
   },
   {
-    title: "Jotted",
+    title: "JottedNotes",
     subtitle: "Note-Taking Application",
     tags: ["Ruby on Rails", "IndexedDB", "PWA"],
     desc: "Developed and deployed a fully static, client-side offline note-taking application. Implemented local data persistence entirely browser-side using IndexedDB, inspired by Excalidraw's local-first architecture. Packaged as an installable PWA and deployed via GitHub Pages.",
     status: "LIVE",
-    url: "https://codecrack-01.github.io/Jotted/",
-    github: "https://github.com/codeCrack-01/Jotted",
+    url: "https://codecrack-01.github.io/JottedNotes/",
+    github: "https://github.com/codeCrack-01/JottedNotes",
   },
   {
     title: "MakeItDone",
@@ -77,7 +77,8 @@ export const projects = [
     tags: ["FastAPI", "SolidJS", "Auth0", "TypeScript", "Python"],
     desc: "A production-ready boilerplate for scaffolding Auth0 authentication with a FastAPI backend and SolidJS frontend. Features JWT validation, protected API routes, token-based access, and a responsive Bootstrap UI. Designed for rapid project bootstrap.",
     status: "TEMPLATE",
-    github: "https://github.com/codeCrack-01/fastapi_solid-js_auth0_authentication",
+    github:
+      "https://github.com/codeCrack-01/fastapi_solid-js_auth0_authentication",
   },
   {
     title: "Expense Tracker",

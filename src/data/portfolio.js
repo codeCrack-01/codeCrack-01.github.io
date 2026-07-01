@@ -113,6 +113,15 @@ export const projects = [
     status: "IN PROGRESS",
     github: "https://github.com/codeCrack-01/zed-jinja2-html",
   },
+  {
+    title: "raqm-core",
+    subtitle: "Unified Python SDK for Pakistani Payment Gateways",
+    tags: ["Python", "httpx", "Pydantic", "Async"],
+    desc: "One async, type-safe interface across multiple processors — EasyPaisa, JazzCash, HBL, ABL, UBL, and more. Published on PyPI with full EasyPaisa support, mock-friendly testing infrastructure, and minimal dependencies.",
+    status: "PRE-ALPHA",
+    url: "https://pypi.org/project/raqm-core/",
+    github: "https://github.com/codeCrack-01/raqm-core",
+  },
 ];
 
 export const research = {
@@ -199,6 +208,7 @@ export const skills = {
 export const recognition = [
   "1st Position Overall — NASA Space Apps Competition (Local Region, UMT Lahore)",
   "IBM Git & GitHub Certification — https://coursera.org/share/9824efc9aeae0a2b044339d5a11722e7",
+  "Coursera — Intro to Ruby on Rails — https://www.coursera.org/account/accomplishments/verify/4M3IWFOKQGBU",
   "Udemy — Java Networking: TCP/UDP client-server applications — https://www.udemy.com/certificate/UC-face6696-f33c-4a72-92d0-239eb723c25d/",
   "National Robotics Engineering Competition (NERC 2026) — Active Competitor",
   `CGPA: ${personal.cgpa}/4.0 @ ${personal.university}`,

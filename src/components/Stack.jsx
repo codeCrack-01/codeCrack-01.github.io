@@ -68,7 +68,7 @@ export default function Stack() {
                       <a
                         href={r.match(/https?:\/\/[^\s]+/)[0]}
                         target="_blank"
-                        class="hover:text-accent underline underline-offset-2"
+                        class="text-accent underline underline-offset-2 hover:opacity-70 transition-opacity"
                       >
                         {r.replace(/ — https?:\/\/[^\s]+/, "")}
                       </a>

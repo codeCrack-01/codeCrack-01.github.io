@@ -163,6 +163,7 @@ export const skills = {
     "JavaScript",
     "TypeScript",
     "HTML/CSS/HTMX",
+    "Ruby",
   ],
   "Backend Frameworks": [
     "FastAPI",
@@ -208,7 +209,7 @@ export const skills = {
 export const recognition = [
   "1st Position Overall — NASA Space Apps Competition (Local Region, UMT Lahore)",
   "IBM Git & GitHub Certification — https://coursera.org/share/9824efc9aeae0a2b044339d5a11722e7",
-  "Coursera — Intro to Ruby on Rails — https://www.coursera.org/account/accomplishments/verify/4M3IWFOKQGBU",
+  "Packt — Intro to Ruby on Rails — https://www.coursera.org/account/accomplishments/verify/4M3IWFOKQGBU",
   "Udemy — Java Networking: TCP/UDP client-server applications — https://www.udemy.com/certificate/UC-face6696-f33c-4a72-92d0-239eb723c25d/",
   "National Robotics Engineering Competition (NERC 2026) — Active Competitor",
   `CGPA: ${personal.cgpa}/4.0 @ ${personal.university}`,

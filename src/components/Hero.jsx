@@ -89,12 +89,15 @@ export default function Hero() {
         </p>
 
         <div class="flex gap-4 pt-8">
-          <a
-            href="#projects"
+          <button
+            onClick={() => {
+              const el = document.getElementById("projects");
+              if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 56, behavior: "smooth" });
+            }}
             class="px-6 py-3 bg-accent text-white font-bold text-xs tracking-widest rounded-lg uppercase hover:opacity-90 transition-opacity"
           >
             View Work
-          </a>
+          </button>
           <a
             href={`mailto:${personal.email}`}
             class="px-6 py-3 border border-border text-xs tracking-widest text-muted hover:border-accent hover:text-accent transition-colors rounded-lg uppercase"

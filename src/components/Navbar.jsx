@@ -4,10 +4,17 @@ import { personal } from "../data/portfolio";
 export default function Navbar() {
   const [open, setOpen] = createSignal(false);
 
+  const scrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const top = el.getBoundingClientRect().top + window.scrollY - 56;
+    window.scrollTo({ top, behavior: "smooth" });
+  };
+
   const links = [
-    { label: "Projects", href: "#projects" },
-    { label: "Research", href: "#research" },
-    { label: "Stack", href: "#stack" },
+    { label: "Projects", scroll: "projects" },
+    { label: "Research", scroll: "research" },
+    { label: "Stack", scroll: "stack" },
     { label: "GitHub", href: personal.github, external: true },
   ];
 
@@ -20,15 +27,24 @@ export default function Navbar() {
         </a>
 
         <div class="hidden md:flex gap-8 text-xs tracking-widest text-muted">
-          {links.map((l) => (
-            <a
-              href={l.href}
-              target={l.external ? "_blank" : undefined}
-              class="hover:text-accent transition-colors uppercase"
-            >
-              {l.label}
-            </a>
-          ))}
+          {links.map((l) =>
+            l.external ? (
+              <a
+                href={l.href}
+                target="_blank"
+                class="hover:text-accent transition-colors uppercase"
+              >
+                {l.label}
+              </a>
+            ) : (
+              <button
+                onClick={() => { setOpen(false); scrollTo(l.scroll); }}
+                class="hover:text-accent transition-colors uppercase"
+              >
+                {l.label}
+              </button>
+            )
+          )}
         </div>
 
         <button
@@ -45,16 +61,25 @@ export default function Navbar() {
       {open() && (
         <div class="md:hidden border-t border-border bg-white">
           <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-4">
-            {links.map((l) => (
+            {links.map((l) =>
+            l.external ? (
               <a
                 href={l.href}
-                target={l.external ? "_blank" : undefined}
+                target="_blank"
                 class="text-sm text-muted hover:text-accent transition-colors uppercase tracking-widest"
                 onClick={() => setOpen(false)}
               >
                 {l.label}
               </a>
-            ))}
+            ) : (
+              <button
+                onClick={() => { setOpen(false); scrollTo(l.scroll); }}
+                class="text-sm text-muted hover:text-accent transition-colors uppercase tracking-widest text-left"
+              >
+                {l.label}
+              </button>
+            )
+          )}
           </div>
         </div>
       )}

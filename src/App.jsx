@@ -10,6 +10,9 @@ export default function App() {
   return (
     <div class="min-h-screen bg-bg text-ink font-sans antialiased">
       <div class="noise" />
+      <div class="bg-orb" />
+      <div class="bg-orb" />
+      <div class="bg-orb" />
       <Navbar />
       <main class="relative z-10">
         <Hero />

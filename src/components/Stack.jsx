@@ -42,7 +42,7 @@ export default function Stack() {
   });
 
   return (
-    <section id="stack" class="py-24">
+    <section id="stack" class="py-24 scroll-mt-14">
       <div class="max-w-6xl mx-auto px-6">
         <div class="section-label mb-10">Tech Stack</div>
 

@@ -55,13 +55,12 @@ export const projects = [
     url: "https://github.com/codeCrack-01/formulator_app",
   },
   {
-    title: "Rates Middle API",
-    subtitle: "Caching Middleware Proxy",
-    tags: ["FastAPI", "Proxy", "Caching"],
-    desc: "Developed a middleware proxy designed to cache and relay daily currency data. Successfully circumvented strict upstream API rate-limits (1-request-per-day) through intelligent caching logic to serve repeated client requests.",
+    title: "TestFast",
+    subtitle: "AI-Powered Test Suite Generator for FastAPI",
+    tags: ["Rust", "CLI", "FastAPI", "AI"],
+    desc: "A CLI tool written in Rust that automatically generates comprehensive test suites for FastAPI projects using LLMs. Supports Anthropic, Gemini, Groq, and OpenAI APIs to analyze your API routes, models, and dependencies — producing pytest-compatible tests with minimal configuration.",
     status: "API",
-    url: "https://rates-middleapi.onrender.com",
-    github: "https://github.com/codeCrack-01/rates-middleapi",
+    github: "https://github.com/codeCrack-01/testfast",
   },
   {
     title: "AI-Powered Email Analyzer",

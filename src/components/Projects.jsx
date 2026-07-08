@@ -62,7 +62,7 @@ function ProjectCard(props) {
 
 export default function Projects() {
   return (
-    <section id="projects" class="py-24">
+    <section id="projects" class="py-24 scroll-mt-14">
       <div class="max-w-6xl mx-auto px-6">
         <div class="section-label mb-10">
           Selected Work

@@ -14,7 +14,7 @@ export default function Research() {
   });
 
   return (
-    <section id="research" class="py-24">
+    <section id="research" class="py-24 scroll-mt-14">
       <div class="max-w-6xl mx-auto px-6">
         <div class="section-label mb-10">Research</div>
 

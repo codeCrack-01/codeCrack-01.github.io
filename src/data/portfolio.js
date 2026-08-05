@@ -21,6 +21,14 @@ export const personal = {
 
 export const projects = [
   {
+    title: "NockIt",
+    subtitle: "Open-Source MCP Server for Push Notifications",
+    tags: ["TypeScript", "FastMCP", "MCP", "JSON-RPC", "CLI"],
+    desc: "An open-source, local-first MCP server that gives autonomous AI coding agents real-time push notification capabilities directly to a developer's mobile device. Solves the workflow bottleneck of monitoring agents like Claude Desktop, Cursor, or OpenCode during long-running tasks by letting them autonomously ping your phone via ntfy.sh when they finish, hit an unrecoverable error, or need human input. Engineered as a TypeScript/FastMCP package with zero external dependencies using JSON-RPC over stdio transport, plus a zero-config interactive setup CLI (npx nockit setup).",
+    status: "API",
+    github: "https://github.com/codeCrack-01/NockIt",
+  },
+  {
     title: "Overleaf MCP",
     subtitle: "MCP Server for LaTeX Paper Management",
     tags: ["FastAPI", "Python", "MCP", "LaTeX", "Git"],

@@ -106,14 +106,6 @@ export const projects = [
     url: "https://github.com/codeCrack-01/ML-from-scratch",
   },
   {
-    title: "Zombie Game [Linux]",
-    subtitle: "TOP-DOWN Survival",
-    tags: ["C++", "SDL2", "Linux"],
-    desc: "Top-down survival game with collision detection, raycasting, sprite animation, and entity state management. Built from scratch in C++ using SDL2.",
-    status: "SYSTEMS",
-    url: "https://hi-tech-developerz.itch.io/shot-dead",
-  },
-  {
     title: "Zed Jinja2 HTML",
     subtitle: "Zed Extension for Jinja2 Template Support",
     tags: ["Zed", "Python", "LSP", "Jinja2", "HTML", "WASM"],

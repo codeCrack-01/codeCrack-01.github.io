@@ -25,7 +25,8 @@ export const projects = [
     subtitle: "Open-Source MCP Server for Push Notifications",
     tags: ["TypeScript", "FastMCP", "MCP", "JSON-RPC", "CLI"],
     desc: "An open-source, local-first MCP server that gives autonomous AI coding agents real-time push notification capabilities directly to a developer's mobile device. Solves the workflow bottleneck of monitoring agents like Claude Desktop, Cursor, or OpenCode during long-running tasks by letting them autonomously ping your phone via ntfy.sh when they finish, hit an unrecoverable error, or need human input. Engineered as a TypeScript/FastMCP package with zero external dependencies using JSON-RPC over stdio transport, plus a zero-config interactive setup CLI (npx nockit setup).",
-    status: "API",
+    status: "MCP",
+    url: "https://codecrack-01.github.io/NockIt/",
     github: "https://github.com/codeCrack-01/NockIt",
   },
   {
@@ -146,19 +147,43 @@ export const research = {
   metric: { value: "39", label: "Models Benchmarked" },
 };
 
-export const freelance = {
-  role: "Freelance Backend Developer & AI Automation Specialist",
-  platform: "Fiverr & Independent Consulting",
-  period: "June 2026 – Present",
-  bullets: [
-    "Architecting robust, high-throughput APIs using FastAPI and integrating advanced AI automation workflows for global clients.",
-    "Delivering production-grade backend solutions with emphasis on scalability, reliability, and clean architecture.",
-  ],
-  links: [
-    { label: "FastAPI Backend Gig", url: "https://www.fiverr.com/s/qDmV7qy" },
-    { label: "AI Automation Gig", url: "https://www.fiverr.com/s/bdVgrYm" },
-  ],
-};
+export const experience = [
+  {
+    role: "Founder & CEO",
+    platform: "Vergate",
+    period: "Aug 2026 – Present",
+    bullets: [
+      "Founded and leading Vergate, a security, performance & SEO platform for vibecoders — passive security scans in under 5 seconds, Core Web Vitals, SEO & AEO, accessibility audits, stack profiling, and uptime monitoring in one dashboard.",
+      "Shipping MCP integration with 17 tools for AI coding assistants (Claude Code, Cursor, Windsurf) over stdio + HTTP transports, alongside a REST API and CLI for shell and CI/CD workflows.",
+      "Engineering active scanning (SQLi, XSS, open redirects) in isolated ephemeral containers, provider-specific security analysis across 10 integrations (GitHub, Vercel, Supabase, Cloudflare, and more), and a 9-check email deliverability engine.",
+      "Opened early access for the Q3 2026 beta and driving waitlist growth toward launch.",
+    ],
+    links: [{ label: "vergate.dev", url: "https://vergate.dev" }],
+  },
+  {
+    role: "Backend Engineer",
+    platform: "FlyRank AI",
+    period: "June 2026 – Aug 2026",
+    bullets: [
+      "Contributed to the backend of FlyRank's agentic AI search growth platform, helping brands rank on Google and become the trusted answer across AI engines like ChatGPT and Perplexity.",
+      "Worked on systems behind the content engine, AI visibility (GEO/AEO) tooling, and page-optimization pipelines serving DTC and B2B clients.",
+    ],
+    links: [{ label: "flyrank.com", url: "https://flyrank.com" }],
+  },
+  {
+    role: "Freelance Backend Developer & AI Automation Specialist",
+    platform: "Fiverr & Independent Consulting",
+    period: "June 2026 – Present",
+    bullets: [
+      "Architecting robust, high-throughput APIs using FastAPI and integrating advanced AI automation workflows for global clients.",
+      "Delivering production-grade backend solutions with emphasis on scalability, reliability, and clean architecture.",
+    ],
+    links: [
+      { label: "FastAPI Backend Gig", url: "https://www.fiverr.com/s/qDmV7qy" },
+      { label: "AI Automation Gig", url: "https://www.fiverr.com/s/bdVgrYm" },
+    ],
+  },
+];
 
 export const skills = {
   Languages: [

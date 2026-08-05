@@ -26,7 +26,7 @@ export const projects = [
     tags: ["TypeScript", "FastMCP", "MCP", "JSON-RPC", "CLI"],
     desc: "An open-source, local-first MCP server that gives autonomous AI coding agents real-time push notification capabilities directly to a developer's mobile device. Solves the workflow bottleneck of monitoring agents like Claude Desktop, Cursor, or OpenCode during long-running tasks by letting them autonomously ping your phone via ntfy.sh when they finish, hit an unrecoverable error, or need human input. Engineered as a TypeScript/FastMCP package with zero external dependencies using JSON-RPC over stdio transport, plus a zero-config interactive setup CLI (npx nockit setup).",
     status: "MCP",
-    url: "https://codecrack-01.github.io/NockIt/",
+    url: "https://nockit.uk",
     github: "https://github.com/codeCrack-01/NockIt",
   },
   {

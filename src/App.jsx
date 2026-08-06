@@ -10,6 +10,7 @@ export default function App() {
   return (
     <div class="min-h-screen bg-bg text-ink font-sans antialiased">
       <div class="noise" />
+      <div class="bg-grid" />
       <div class="bg-orb" />
       <div class="bg-orb" />
       <div class="bg-orb" />

@@ -2,8 +2,14 @@ import { createSignal, onMount } from "solid-js";
 import { projects } from "../data/portfolio";
 
 const statusColors = {
-  LIVE: { bg: "bg-blue-600", text: "text-blue-600", border: "border-blue-600/30", fill: "bg-blue-600/5" },
-  API: { bg: "bg-indigo-800", text: "text-indigo-800", border: "border-indigo-800/30", fill: "bg-indigo-800/5" },
+  LIVE: { dot: "bg-emerald-400", text: "text-emerald-300", ring: "border-emerald-400/30 bg-emerald-400/10" },
+  MCP: { dot: "bg-violet-400", text: "text-violet-300", ring: "border-violet-400/30 bg-violet-400/10" },
+  API: { dot: "bg-sky-400", text: "text-sky-300", ring: "border-sky-400/30 bg-sky-400/10" },
+  "IN PROGRESS": { dot: "bg-amber-400", text: "text-amber-300", ring: "border-amber-400/30 bg-amber-400/10" },
+  ONGOING: { dot: "bg-amber-400", text: "text-amber-300", ring: "border-amber-400/30 bg-amber-400/10" },
+  HACKATHON: { dot: "bg-rose-400", text: "text-rose-300", ring: "border-rose-400/30 bg-rose-400/10" },
+  TEMPLATE: { dot: "bg-zinc-400", text: "text-zinc-300", ring: "border-zinc-400/30 bg-zinc-400/10" },
+  "PRE-ALPHA": { dot: "bg-cyan-400", text: "text-cyan-300", ring: "border-cyan-400/30 bg-cyan-400/10" },
 };
 
 function ProjectCard(props) {
@@ -18,41 +24,45 @@ function ProjectCard(props) {
     if (cardRef) observer.observe(cardRef);
   });
 
-  const sc = statusColors[props.project.status] || { bg: "bg-accent", text: "text-accent", border: "border-accent/30", fill: "bg-accent/5" };
+  const sc = statusColors[props.project.status] || { dot: "bg-accent", text: "text-accent-dim", ring: "border-accent/30 bg-accent/10" };
 
   return (
     <div
       ref={cardRef}
-      class="island-card border border-border/60 p-6"
+      class="card card-hover p-6 relative overflow-hidden group"
       classList={{ reveal: true, active: visible() }}
     >
-      <div class="flex justify-between items-start mb-4">
-        <div>
-          <h3 class="font-sans text-lg font-bold text-ink">{props.project.title}</h3>
-          <p class="text-muted text-xs mt-0.5">{props.project.subtitle}</p>
-        </div>
-        <span class={`whitespace-nowrap px-2.5 py-1 text-[10px] ${sc.border} ${sc.text} ${sc.fill} rounded-full flex items-center gap-1.5`}>
-          <span class={`w-1.5 h-1.5 rounded-full ${sc.bg}`} />
+      <div class="absolute inset-x-0 top-0 h-px bg-grad-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div class="flex items-start justify-between gap-3 mb-4">
+        <span class="font-mono text-xs text-muted/40 font-bold">
+          {String(props.index + 1).padStart(2, "0")}
+        </span>
+        <span class={`whitespace-nowrap px-2.5 py-1 text-[10px] tracking-widest uppercase font-mono ${sc.ring} ${sc.text} rounded-full flex items-center gap-1.5`}>
+          <span class={`w-1.5 h-1.5 rounded-full ${sc.dot}`} />
           {props.project.status}
         </span>
       </div>
-      <p class="text-muted text-xs leading-relaxed mb-5 h-auto min-h-[3rem]">
+      <h3 class="font-sans text-lg font-bold text-ink group-hover:text-accent-dim transition-colors">
+        {props.project.title}
+      </h3>
+      <p class="text-accent-cyan text-xs mt-1 mb-3">{props.project.subtitle}</p>
+      <p class="text-muted text-xs leading-relaxed mb-5 min-h-[3rem]">
         {props.project.desc}
       </p>
-      <div class="flex flex-wrap gap-2 mb-4">
+      <div class="flex flex-wrap gap-2 mb-5">
         {props.project.tags.map((t) => (
-          <span class="text-[10px] px-2 py-1 bg-bg border border-border rounded text-muted">{t}</span>
+          <span class="chip">{t}</span>
         ))}
       </div>
-      <div class="flex gap-4">
+      <div class="flex gap-5 pt-3 border-t border-border/60">
         {props.project.url && (
-          <a href={props.project.url} target="_blank" class="text-xs text-muted hover:text-accent flex items-center gap-1 transition-colors">
-            VISIT <span class="text-lg leading-none">→</span>
+          <a href={props.project.url} target="_blank" class="text-xs font-mono text-muted hover:text-accent-dim flex items-center gap-1.5 transition-colors">
+            VISIT <span class="text-base leading-none">→</span>
           </a>
         )}
         {props.project.github && (
-          <a href={props.project.github} target="_blank" class="text-xs text-muted hover:text-accent flex items-center gap-1 transition-colors">
-            SOURCE <span class="text-lg leading-none">↗</span>
+          <a href={props.project.github} target="_blank" class="text-xs font-mono text-muted hover:text-accent-dim flex items-center gap-1.5 transition-colors">
+            SOURCE <span class="text-base leading-none">↗</span>
           </a>
         )}
       </div>
@@ -62,15 +72,17 @@ function ProjectCard(props) {
 
 export default function Projects() {
   return (
-    <section id="projects" class="py-24 scroll-mt-14">
+    <section id="projects" class="py-24 scroll-mt-16">
       <div class="max-w-6xl mx-auto px-6">
-        <div class="section-label mb-10">
-          Selected Work
-          <span class="text-muted text-[10px] ml-auto font-sans normal-case tracking-normal">{String(projects.length).padStart(2, "0")}</span>
+        <div class="flex items-end justify-between mb-10">
+          <div class="section-label">Selected Work</div>
+          <span class="text-muted font-mono text-xs">
+            {String(projects.length).padStart(2, "0")} projects
+          </span>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {projects.map((p) => (
-            <ProjectCard project={p} />
+          {projects.map((p, i) => (
+            <ProjectCard project={p} index={i} />
           ))}
         </div>
       </div>

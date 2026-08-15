@@ -4,6 +4,7 @@ import Projects from "./components/Projects";
 import Research from "./components/Research";
 import Freelance from "./components/Freelance";
 import Stack from "./components/Stack";
+import Faq from "./components/Faq";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
         <Research />
         <Freelance />
         <Stack />
+        <Faq />
       </main>
       <Footer />
     </div>

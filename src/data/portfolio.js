@@ -21,6 +21,21 @@ export const personal = {
 
 export const projects = [
   {
+    title: "Vergate",
+    subtitle: "All-in-One Security, Performance & SEO Platform",
+    featured: true,
+    tags: ["Security Scanning", "MCP", "SEO / AEO", "Performance", "Uptime Monitoring"],
+    desc: "Vergate is an all-in-one developer and SaaS platform providing security scanning, performance analysis, SEO/AEO optimization, accessibility audits, and uptime monitoring. Passive security scans complete in under 5 seconds, and a built-in MCP integration exposes 17 tools to AI coding assistants — all in one dashboard.",
+    status: "LIVE",
+    url: "https://vergate.dev/?utm_source=portfolio&utm_medium=website&utm_campaign=launch&utm_content=personal-portfolio",
+    highlights: [
+      { label: "Passive security scan speed", value: "<5s" },
+      { label: "MCP tools for AI agents", value: "17" },
+      { label: "Platform integrations", value: "10+" },
+      { label: "Email deliverability checks", value: "9" },
+    ],
+  },
+  {
     title: "NockIt",
     subtitle: "Open-Source MCP Server for Push Notifications",
     tags: ["TypeScript", "FastMCP", "MCP", "JSON-RPC", "CLI"],
@@ -261,4 +276,32 @@ export const researchInterests = [
   "Reliable & Testable Backend Infrastructure",
   "Automated Testing & CI/CD Pipelines",
   "Embedded Systems & Robotics",
+];
+
+export const faq = [
+  {
+    question: "What engineering work is Zain Ahmed Khan open to?",
+    answer:
+      "Internships, freelance contracts, and full-time backend engineering roles focused on distributed systems, high-performance APIs, and ML infrastructure.",
+  },
+  {
+    question: "What is Zain's core tech stack?",
+    answer:
+      "Python, FastAPI, Django, C/C++, TypeScript, Ruby on Rails, PostgreSQL, Docker, and CI/CD pipelines — spanning backend frameworks, databases, and DevOps automation.",
+  },
+  {
+    question: "Has Zain shipped production software?",
+    answer:
+      "Yes. Vergate, his flagship security, performance and SEO platform, is live at vergate.dev — alongside NockIt, an open-source MCP server that pushes phone notifications from AI coding agents, the raqm-core payment SDK on PyPI, and deployed apps like MakeItDone and JottedNotes.",
+  },
+  {
+    question: "What is Zain's education and academic standing?",
+    answer:
+      "A second-year BS Computer Science student at LUMS (2025–2029) with a 3.806/4.0 CGPA, currently contributing to ML inference benchmarking research.",
+  },
+  {
+    question: "Has Zain earned any recognitions or awards?",
+    answer:
+      "1st position overall at the NASA Space Apps Competition (local region), an active competitor in NERC 2026, and certifications in Git & GitHub, Ruby on Rails, and Java networking.",
+  },
 ];

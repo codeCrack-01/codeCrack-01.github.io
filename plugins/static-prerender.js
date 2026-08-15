@@ -49,10 +49,25 @@ export function staticPrerender() {
   <footer>${esc(name)}</footer>
 </div>`;
 
-        return html.replace(
+        const faq = extractFaq(src);
+        const faqSchema = faq.length
+          ? `<script type="application/ld+json">${JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: faq.map((f) => ({
+                "@type": "Question",
+                name: f.question,
+                acceptedAnswer: { "@type": "Answer", text: f.answer },
+              })),
+            })}</script>`
+          : "";
+
+        let out = html.replace(
           '<div id="app"></div>',
           `<div id="app">${staticHtml}</div>`,
         );
+        if (faqSchema) out = out.replace("</head>", `${faqSchema}</head>`);
+        return out;
       },
     },
   };
@@ -73,6 +88,15 @@ function firstInArray(src, key) {
   const rest = src.slice(idx);
   const m = rest.match(/["']((?:[^"']|\\['"])*)["']/);
   return m ? m[1] : "";
+}
+
+function extractFaq(src) {
+  const start = src.indexOf("export const faq = [");
+  if (start === -1) return [];
+  const body = src.slice(start);
+  const questions = [...body.matchAll(/question:\s*"((?:[^"\\]|\\.)*)"/g)].map((m) => m[1]);
+  const answers = [...body.matchAll(/answer:\s*"((?:[^"\\]|\\.)*)"/g)].map((m) => m[1]);
+  return questions.map((question, i) => ({ question, answer: answers[i] || "" }));
 }
 
 function extractProjects(src) {

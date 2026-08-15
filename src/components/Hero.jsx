@@ -99,6 +99,30 @@ function Terminal() {
   );
 }
 
+const VERGATE_TOKEN =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ2ZXJnYXRlLmRldiIsInN1YiI6ImJkZ192azV4NTZydmlmIiwiZG9tYWluIjoiY29kZWNyYWNrLTAxLmdpdGh1Yi5pbyIsInRpZXIiOiJ2ZXJpZmllZCIsImlhdCI6MTc4Njc4NjUyMCwiZXhwIjoxODAyMzM4NTIwfQ.k9U79E3asQMnv0vMo6P7Ti60hxrW_aEMPaYxyNzjsQQ";
+
+function VerifiedBadge() {
+  let ref;
+
+  onMount(() => {
+    if (!ref) return;
+    const a = document.createElement("a");
+    a.href = `https://api.vergate.dev/badge/${VERGATE_TOKEN}`;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    const s = document.createElement("script");
+    s.src = "https://api.vergate.dev/badge.js";
+    s.dataset.token = VERGATE_TOKEN;
+    s.dataset.style = "light";
+    s.async = true;
+    a.appendChild(s);
+    ref.appendChild(a);
+  });
+
+  return <div ref={ref} class="mt-5 animate-fade-up" style="animation-delay: 280ms" />;
+}
+
 export default function Hero() {
   return (
     <section class="min-h-screen flex items-center relative pt-28 pb-20">
@@ -153,21 +177,7 @@ export default function Hero() {
               </a>
             </div>
 
-            <div class="mt-5 animate-fade-up" style="animation-delay: 280ms">
-              <a
-                href="https://api.vergate.dev/badge/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ2ZXJnYXRlLmRldiIsInN1YiI6ImJkZ192azV4NTZydmlmIiwiZG9tYWluIjoiY29kZWNyYWNrLTAxLmdpdGh1Yi5pbyIsInRpZXIiOiJ2ZXJpZmllZCIsImlhdCI6MTc4Njc4NjUyMCwiZXhwIjoxODAyMzM4NTIwfQ.k9U79E3asQMnv0vMo6P7Ti60hxrW_aEMPaYxyNzjsQQ"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-block"
-              >
-                <script
-                  src="https://api.vergate.dev/badge.js"
-                  data-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ2ZXJnYXRlLmRldiIsInN1YiI6ImJkZ192azV4NTZydmlmIiwiZG9tYWluIjoiY29kZWNyYWNrLTAxLmdpdGh1Yi5pbyIsInRpZXIiOiJ2ZXJpZmllZCIsImlhdCI6MTc4Njc4NjUyMCwiZXhwIjoxODAyMzM4NTIwfQ.k9U79E3asQMnv0vMo6P7Ti60hxrW_aEMPaYxyNzjsQQ"
-                  data-style="dark"
-                  async={true}
-                />
-              </a>
-            </div>
+            <VerifiedBadge />
 
             <div class="grid grid-cols-3 gap-4 pt-12 animate-fade-up" style="animation-delay: 300ms">
               <div class="card card-hover p-4">

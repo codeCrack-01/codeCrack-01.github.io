@@ -100,7 +100,7 @@ function Terminal() {
 }
 
 const VERGATE_TOKEN =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ2ZXJnYXRlLmRldiIsInN1YiI6ImJkZ192azV4NTZydmlmIiwiZG9tYWluIjoiY29kZWNyYWNrLTAxLmdpdGh1Yi5pbyIsInRpZXIiOiJ2ZXJpZmllZCIsImlhdCI6MTc4Njc4NjUyMCwiZXhwIjoxODAyMzM4NTIwfQ.k9U79E3asQMnv0vMo6P7Ti60hxrW_aEMPaYxyNzjsQQ";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ2ZXJnYXRlLmRldiIsInN1YiI6ImJkZ19jN2puNXJ0bHplIiwiZG9tYWluIjoiY29kZWNyYWNrLTAxLmdpdGh1Yi5pbyIsInRpZXIiOiJ2ZXJpZmllZCIsImlhdCI6MTc4NjgwNTY3OSwiZXhwIjoxODAyMzU3Njc5fQ.oIv16jMGdL8tbSG6xBirCosjQw6-8xjXUV0Q1fs9kus";
 
 function VerifiedBadge() {
   let ref;
@@ -114,7 +114,7 @@ function VerifiedBadge() {
     const s = document.createElement("script");
     s.src = "https://api.vergate.dev/badge.js";
     s.dataset.token = VERGATE_TOKEN;
-    s.dataset.style = "light";
+    s.dataset.style = "dark";
     s.async = true;
     a.appendChild(s);
     ref.appendChild(a);

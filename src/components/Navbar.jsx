@@ -29,24 +29,20 @@ export default function Navbar() {
     <nav
       class={`fixed top-0 w-full z-40 transition-all duration-300 ${
         scrolled()
-          ? "bg-[#0b0e14]/85 backdrop-blur-xl border-b border-border shadow-lg shadow-black/30"
+          ? "bg-[#F4EFE6]/90 backdrop-blur-md border-b border-border"
           : "bg-transparent border-b border-transparent"
       }`}
     >
       <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a
-          href="#"
-          class="flex items-center gap-2.5 text-ink font-bold text-sm tracking-widest"
-        >
-          <span class="w-2.5 h-2.5 rounded-full bg-gradient-to-br from-accent-cyan to-accent shadow-glow" />
-          ZAIN<span class="text-muted">_</span>KHAN
+        <a href="#" class="flex items-center gap-2 text-ink font-serif text-lg font-medium">
+          Zain Ahmed Khan
         </a>
 
-        <div class="hidden md:flex items-center gap-8 text-xs tracking-widest text-muted">
+        <div class="hidden md:flex items-center gap-7 text-sm text-muted">
           {links.map((l) => (
             <button
               onClick={() => { setOpen(false); scrollTo(l.scroll); }}
-              class="uppercase hover:text-accent-dim transition-colors relative after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-grad-primary after:transition-all after:duration-300 hover:after:w-full"
+              class="hover:text-ink transition-colors"
             >
               {l.label}
             </button>
@@ -54,15 +50,15 @@ export default function Navbar() {
         </div>
 
         <div class="flex items-center gap-4">
-          <span class="hidden lg:inline-flex items-center gap-2 text-[10px] tracking-widest uppercase font-mono text-muted">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_rgba(52,211,153,0.9)]" />
-            Open to work
-          </span>
           <a
-            href={`mailto:${personal.email}`}
-            class="hidden md:inline-flex btn-primary !px-5 !py-2.5"
+            href={personal.github}
+            target="_blank"
+            class="hidden md:inline-flex text-sm text-muted hover:text-ink transition-colors"
           >
-            Hire Me
+            GitHub
+          </a>
+          <a href={`mailto:${personal.email}`} class="btn-primary !py-2 !px-4">
+            Say hello
           </a>
           <button
             onClick={() => setOpen(!open())}
@@ -77,30 +73,21 @@ export default function Navbar() {
       </div>
 
       {open() && (
-        <div class="md:hidden border-t border-border bg-[#0e1220]/95 backdrop-blur-xl">
+        <div class="md:hidden border-t border-border bg-[#F4EFE6]/95 backdrop-blur-md">
           <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-4">
             {links.map((l) => (
               <button
                 onClick={() => { setOpen(false); scrollTo(l.scroll); }}
-                class="text-sm text-muted hover:text-accent-dim transition-colors uppercase tracking-widest text-left"
+                class="text-sm text-muted hover:text-ink transition-colors text-left"
               >
                 {l.label}
               </button>
             ))}
-            <a
-              href={personal.github}
-              target="_blank"
-              class="text-sm text-muted hover:text-accent-dim transition-colors uppercase tracking-widest"
-              onClick={() => setOpen(false)}
-            >
+            <a href={personal.github} target="_blank" class="text-sm text-muted hover:text-ink transition-colors" onClick={() => setOpen(false)}>
               GitHub
             </a>
-            <a
-              href={`mailto:${personal.email}`}
-              class="btn-primary mt-2"
-              onClick={() => setOpen(false)}
-            >
-              Hire Me
+            <a href={`mailto:${personal.email}`} class="btn-primary mt-2" onClick={() => setOpen(false)}>
+              Say hello
             </a>
           </div>
         </div>

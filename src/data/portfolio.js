@@ -9,14 +9,13 @@ export const personal = {
   degree: "BS Computer Science",
   batch: "2025 – 2029",
   taglines: [
-    "Backend Infrastructure",
-    "Distributed Systems",
-    "High-Performance APIs",
-    "ML Engineering",
-    "Linux Enthusiast",
+    "Backend systems",
+    "Distributed systems",
+    "High-performance APIs",
+    "ML infrastructure",
   ],
   blurb:
-    "Second-year CS undergraduate at LUMS with extensive self-taught experience in enterprise backend systems, distributed architecture, and ML infrastructure. Focused on systems optimization, high-performance API design, and automated verification pipelines.",
+    "CS sophomore at LUMS. I build backend systems, tinker with ML infra, and spend too much time in the terminal. Currently an Assistant Director in LRS's Tech & Innovation department and a HackX member at SPADES. Mostly working on the LRS community portal and Vergate these days.",
 };
 
 export const projects = [
@@ -34,6 +33,14 @@ export const projects = [
       { label: "Platform integrations", value: "10+" },
       { label: "Email deliverability checks", value: "9" },
     ],
+  },
+  {
+    title: "LRS Portal",
+    subtitle: "Community platform for LRS",
+    tags: ["Full-Stack", "Community", "Dashboard"],
+    desc: "Building the community platform for LRS's Tech & Innovation department — a dashboard and tools for the LRS community. Currently live for members.",
+    status: "LIVE",
+    url: "https://lrs-platform.vercel.app/dashboard",
   },
   {
     title: "NockIt",
@@ -276,6 +283,34 @@ export const researchInterests = [
   "Reliable & Testable Backend Infrastructure",
   "Automated Testing & CI/CD Pipelines",
   "Embedded Systems & Robotics",
+];
+
+export const societies = [
+  {
+    name: "LRS",
+    role: "Assistant Director — Tech & Innovation Dept",
+    desc: "Building and maintaining the tech that keeps the LRS community running — including the LRS portal.",
+    link: "https://lrs-platform.vercel.app/dashboard",
+  },
+  {
+    name: "SPADES",
+    role: "HackX member",
+    desc: "Taking part in hackathons and building things fast with a small team.",
+    link: null,
+  },
+];
+
+export const now = [
+  {
+    title: "LRS Portal",
+    desc: "Shipping the community dashboard for LRS members.",
+    url: "https://lrs-platform.vercel.app/dashboard",
+  },
+  {
+    title: "Vergate",
+    desc: "Contributing to the security, performance & SEO platform.",
+    url: "https://vergate.dev",
+  },
 ];
 
 export const faq = [

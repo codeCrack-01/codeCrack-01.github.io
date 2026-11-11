@@ -2,26 +2,20 @@ import { personal } from "../data/portfolio";
 
 export default function Footer() {
   return (
-    <footer class="border-t border-border bg-[#0d1019]/80 relative overflow-hidden">
-      <div class="absolute inset-x-0 top-0 h-px bg-grad-primary opacity-40" />
-
+    <footer class="border-t border-border bg-[#EDE6DA]/60 relative">
       <div class="max-w-6xl mx-auto px-6 py-20 md:py-24">
-        <div class="text-center space-y-6">
-          <div class="section-label justify-center !after:max-w-0 !after:flex-none w-fit mx-auto">
-            Let's Build Together
-          </div>
-          <h2 class="font-sans text-3xl md:text-5xl font-bold tracking-tight text-ink">
-            Need a backend engineer<br />
-            who ships <span class="grad-text">reliable systems</span>?
+        <div class="max-w-2xl">
+          <p class="section-label mb-6">Let's talk</p>
+          <h2 class="font-serif text-3xl md:text-5xl font-medium tracking-tight text-ink leading-tight">
+            Need a backend engineer who actually ships?
           </h2>
-          <p class="text-muted max-w-xl mx-auto text-sm md:text-base leading-relaxed">
-            Currently open to internships, freelance contracts, and full-time backend
-            engineering roles. Let's talk about what you're building.
+          <p class="text-muted max-w-xl mt-5 text-base leading-relaxed">
+            I'm open to internships, freelance contracts, and interesting side
+            projects. If you're building something and want help, send a note.
           </p>
-          <div class="flex flex-wrap justify-center gap-4 pt-2">
+          <div class="flex flex-wrap gap-3 pt-6">
             <a href={`mailto:${personal.email}`} class="btn-primary">
-              Say Hello
-              <span class="text-base leading-none">→</span>
+              Say hello
             </a>
             <a href={personal.linkedin} target="_blank" class="btn-ghost">
               LinkedIn
@@ -31,16 +25,14 @@ export default function Footer() {
       </div>
 
       <div class="border-t border-border py-8">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-5">
-          <div class="text-muted text-[10px] tracking-widest uppercase font-mono">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div class="text-muted text-xs font-mono">
             Zain Ahmed Khan © {new Date().getFullYear()}
           </div>
-          <div class="flex gap-8 text-[10px] tracking-widest text-muted uppercase font-mono">
-            <a href={personal.github} target="_blank" class="hover:text-accent-dim transition-colors">GitHub</a>
-            <a href={personal.linkedin} target="_blank" class="hover:text-accent-dim transition-colors">LinkedIn</a>
-            <a href={`mailto:${personal.email}`} class="hover:text-accent-dim transition-colors">Email</a>
-            <span class="text-border">·</span>
-            <span class="text-muted/70">SolidJS + Tailwind</span>
+          <div class="flex gap-6 text-xs font-mono text-muted">
+            <a href={personal.github} target="_blank" class="hover:text-ink transition-colors">GitHub</a>
+            <a href={personal.linkedin} target="_blank" class="hover:text-ink transition-colors">LinkedIn</a>
+            <a href={`mailto:${personal.email}`} class="hover:text-ink transition-colors">Email</a>
           </div>
         </div>
       </div>

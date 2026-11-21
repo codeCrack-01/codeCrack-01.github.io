@@ -29,7 +29,7 @@ export default function Sidebar() {
           <a href={`mailto:${personal.email}`} class="block text-accent hover:text-accent-dim">Email</a>
           <a href={personal.github} target="_blank" class="block text-accent hover:text-accent-dim">GitHub</a>
           <a href={personal.linkedin} target="_blank" class="block text-accent hover:text-accent-dim">LinkedIn</a>
-          <a href="https://lrs-portal.vercel.app" target="_blank" class="block text-accent hover:text-accent-dim">LRS Portal</a>
+          <a href="https://portal.lrslums.com" target="_blank" class="block text-accent hover:text-accent-dim">LRS Portal</a>
         </div>
 
         <div class="mt-5 pt-5 border-t border-border text-xs text-muted space-y-1">

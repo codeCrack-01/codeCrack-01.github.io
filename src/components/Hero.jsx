@@ -26,7 +26,7 @@ export default function Hero() {
               Zain Ahmed Khan
             </h1>
             <p class="lead" style="margin-top:var(--space-md);color:var(--color-muted);max-width:52ch;">
-              Backend systems, distributed infrastructure, and ML pipelines — researching under Dr. Abdul Ali Bangash. CGPA {personal.cgpa}/4.0.
+              Backend systems and ML infrastructure. CS undergrad at LUMS researching under Dr. Abdul Ali Bangash and leading tech/platform work for LRS.
             </p>
             <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-md);margin-top:var(--space-xl);max-width:420px;">
               {stats.map((s) => (

@@ -5,6 +5,7 @@ export default function Research() {
     <section id="research" class="section" style="background:var(--color-paper-2);border-top:var(--rule-bar) solid var(--color-rule);border-bottom:var(--rule-bar) solid var(--color-rule);">
       <div class="container">
         <h2>Research</h2>
+        <p class="lead" style="margin-top:var(--space-md);margin-bottom:var(--space-xl);color:var(--color-muted);">Empirical systems work and ongoing collaboration.</p>
         <div style="margin-top:var(--space-xl);">
           {research.map((r) => (
             <div class="row">

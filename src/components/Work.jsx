@@ -4,7 +4,7 @@ export default function Work() {
   return (
     <section id="work" class="section" style="background:var(--color-accent);color:var(--color-accent-ink);border-top:var(--rule-bar) solid var(--color-accent-2);border-bottom:var(--rule-bar) solid var(--color-accent-2);">
       <div class="container">
-        <h2>Selected work</h2>
+        <h2>Selected work — {projects.length}</h2>
         <p class="lead" style="margin-top:var(--space-md);margin-bottom:var(--space-xl);">Projects shipped and in progress.</p>
         <div>
           {projects.map((p) => (

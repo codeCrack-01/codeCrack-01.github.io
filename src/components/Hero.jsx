@@ -1,6 +1,13 @@
 import { personal } from "../data/portfolio";
 
 export default function Hero() {
+  const stats = [
+    { value: personal.cgpa, label: "CGPA / 4.0" },
+    { value: "39", label: "Models benchmarked" },
+    { value: "1st", label: "NASA Space Apps (regional)" },
+    { value: "17", label: "MCP tools shipped" },
+  ];
+
   return (
     <section style="position:relative;padding-block:var(--section-gap-l);background:var(--color-paper);color:var(--color-ink);overflow:hidden;border-bottom:var(--rule-bar) solid var(--color-rule);">
       <div class="container" style="position:relative;z-index:1;">
@@ -15,6 +22,14 @@ export default function Hero() {
             <p class="lead" style="margin-top:var(--space-md);color:var(--color-muted);max-width:52ch;">
               Backend systems, distributed infrastructure, and ML pipelines — researching under Dr. Abdul Ali Bangash. CGPA {personal.cgpa}/4.0.
             </p>
+            <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-md);margin-top:var(--space-xl);max-width:420px;">
+              {stats.map((s) => (
+                <div style="padding:var(--space-md);border:var(--rule-hair) solid var(--color-rule);border-radius:var(--radius-pill);">
+                  <div style="font-family:'JetBrains Mono', monospace;font-weight:800;font-size:var(--text-xl);color:var(--color-accent);line-height:1;">{s.value}</div>
+                  <div style="font-size:var(--text-xs);color:var(--color-muted);margin-top:var(--space-xs);">{s.label}</div>
+                </div>
+              ))}
+            </div>
             <div style="display:flex;gap:var(--space-md);margin-top:var(--space-xl);">
               <a href={`mailto:${personal.email}`} class="btn btn--primary">Contact</a>
               <a href={personal.github} target="_blank" class="btn">GitHub ↗</a>
@@ -24,7 +39,7 @@ export default function Hero() {
             </p>
           </div>
           <div style="display:flex;justify-content:center;">
-            <div style="width:360px;height:360px;border-radius:50%;overflow:hidden;border-top:3px solid #FFFFFF;border-left:3px solid #FFFFFF;border-right:3px solid #FFFFFF;border-bottom:3px solid transparent;box-shadow:0 8px 32px rgba(0,0,0,0.4);">
+            <div style="width:420px;height:420px;border-radius:50%;overflow:hidden;border-top:3px solid #FFFFFF;border-left:3px solid #FFFFFF;border-right:3px solid #FFFFFF;border-bottom:3px solid transparent;box-shadow:0 8px 32px rgba(0,0,0,0.4);">
               <img src="/me.jpg" alt="Zain Ahmed Khan" style="border-radius:50%;width:100%;height:100%;object-fit:cover;" />
             </div>
           </div>

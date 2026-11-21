@@ -2,7 +2,7 @@ import { skills, recognition, education } from "../data/portfolio";
 
 export default function Skills() {
   return (
-    <section id="skills" class="section">
+    <section id="skills" class="section" style="background:var(--color-accent);color:var(--color-accent-ink);border-top:var(--rule-bar) solid var(--color-accent-2);border-bottom:var(--rule-bar) solid var(--color-accent-2);">
       <div class="container">
         <h2>Skills</h2>
         <div style="margin-top:var(--space-xl);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);">

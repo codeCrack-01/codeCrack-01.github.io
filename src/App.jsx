@@ -12,7 +12,7 @@ export default function App() {
       <div
         aria-hidden="true"
         class="fixed inset-0 pointer-events-none z-0"
-        style="background-image: url('/pattern.svg'); background-size: 80px 80px; background-repeat: repeat; opacity: 0.12;"
+        style="background-image: url('/pattern.svg'); background-size: 80px 80px; background-repeat: repeat; opacity: 0.55;"
       />
       <div
         aria-hidden="true"

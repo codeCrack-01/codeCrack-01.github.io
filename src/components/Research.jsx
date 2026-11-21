@@ -2,30 +2,32 @@ import { research } from "../data/portfolio";
 
 export default function Research() {
   return (
-    <section id="research" class="py-12 scroll-mt-16">
-      <h2 class="section-title">Research</h2>
-      <div class="space-y-6">
-        {research.map((r) => (
-          <div class="card card-hover p-6 md:p-8">
-            <div class="flex flex-wrap items-baseline justify-between gap-2 mb-2">
-              <h3 class="font-serif text-xl font-semibold text-ink">{r.title}</h3>
-              <span class="text-xs font-mono text-muted">{r.period}</span>
-            </div>
-            <p class="text-sm text-muted">
-              {r.role} · {r.institution} · Supervisor: {r.supervisor}
-            </p>
-            <ul class="mt-4 space-y-2 text-sm text-ink leading-relaxed list-disc list-inside">
-              {r.bullets.map((b) => (
-                <li>{b}</li>
-              ))}
-            </ul>
-            {r.metric && (
-              <p class="mt-4 text-sm font-mono text-accent">
-                {r.metric.value} {r.metric.label}
+    <section id="research" class="section" style="background:var(--color-paper-2);border-top:var(--rule-bar) solid var(--color-rule);border-bottom:var(--rule-bar) solid var(--color-rule);">
+      <div class="container">
+        <h2>Research</h2>
+        <div style="margin-top:var(--space-xl);">
+          {research.map((r) => (
+            <div class="row">
+              <div style="display:grid;grid-template-columns:1fr auto;gap:var(--space-md);align-items:baseline;">
+                <h3>{r.title}</h3>
+                <span class="num" style="font-size:var(--text-sm);color:var(--color-muted);">{r.period}</span>
+              </div>
+              <p style="font-size:var(--text-sm);color:var(--color-muted);margin-top:var(--space-xs);">
+                {r.role} · {r.institution} · Supervisor: {r.supervisor}
               </p>
-            )}
-          </div>
-        ))}
+              <ul style="margin-top:var(--space-md);padding-left:var(--space-lg);font-size:var(--text-md);line-height:1.6;">
+                {r.bullets.map((b) => (
+                  <li style="margin-bottom:var(--space-xs);">{b}</li>
+                ))}
+              </ul>
+              {r.metric && (
+                <p class="num" style="margin-top:var(--space-md);font-size:var(--text-lg);color:var(--color-accent);">
+                  {r.metric.value} {r.metric.label}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

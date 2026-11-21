@@ -8,7 +8,7 @@ export default function Navbar() {
     window.scrollTo({ top, behavior: "smooth" });
   };
   return (
-    <nav style="position:sticky;top:0;z-index:300;background:var(--color-paper);border-bottom:var(--rule-bar) solid var(--color-rule-2);">
+    <nav style="position:sticky;top:0;z-index:300;background:rgba(10,13,20,0.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--color-rule);">
       <div class="container" style="display:flex;align-items:center;justify-content:space-between;height:64px;">
         <a href="#" style="font-family:var(--font-display);font-weight:600;font-size:var(--text-md);text-decoration:none;color:var(--color-ink);">Zain Ahmed Khan</a>
         <div style="display:flex;gap:var(--space-lg);font-size:var(--text-sm);">

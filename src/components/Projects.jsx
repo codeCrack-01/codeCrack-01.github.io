@@ -8,7 +8,12 @@ export default function Projects() {
         {projects.map((p) => (
           <div class="card card-hover p-6 flex flex-col">
             <div class="flex items-start justify-between gap-3 mb-2">
-              <h3 class="font-serif text-lg font-semibold text-ink">{p.title}</h3>
+              <div style="display:flex;align-items:center;gap:var(--space-sm);">
+                {p.logo && (
+                  <img src={p.logo} alt="" style="width:24px;height:24px;object-fit:contain;border-radius:4px;" />
+                )}
+                <h3 class="font-serif text-lg font-semibold text-ink">{p.title}</h3>
+              </div>
               <span class="text-xs font-mono text-muted whitespace-nowrap">{p.status}</span>
             </div>
             <p class="text-sm text-muted">{p.subtitle}</p>

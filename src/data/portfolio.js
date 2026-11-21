@@ -22,6 +22,7 @@ export const projects = [
     desc: "Vergate is an all-in-one developer and SaaS platform providing security scanning, performance analysis, SEO/AEO optimization, accessibility audits, and uptime monitoring. Passive security scans complete in under 5 seconds, and a built-in MCP integration exposes 17 tools to AI coding assistants — all in one dashboard.",
     status: "LIVE",
     url: "https://vergate.dev/?utm_source=portfolio&utm_medium=website&utm_campaign=launch&utm_content=personal-portfolio",
+    logo: "/vergate-logo.svg",
     highlights: [
       { label: "Passive security scan speed", value: "<5s" },
       { label: "MCP tools for AI agents", value: "17" },
@@ -45,6 +46,7 @@ export const projects = [
     status: "MCP",
     url: "https://nockit.uk",
     github: "https://github.com/codeCrack-01/NockIt",
+    logo: "/nockit.svg",
   },
   {
     title: "Overleaf MCP",
@@ -62,6 +64,7 @@ export const projects = [
     status: "LIVE",
     url: "https://codecrack-01.github.io/JottedNotes/",
     github: "https://github.com/codeCrack-01/JottedNotes",
+    logo: "/jottednotes.svg",
   },
   {
     title: "MakeItDone",
@@ -71,6 +74,7 @@ export const projects = [
     status: "LIVE",
     url: "https://makeitdone-frontend.onrender.com/",
     github: "https://github.com/codeCrack-01/makeitdone",
+    logo: "/makeitdone.svg",
   },
   {
     title: "Formulator",

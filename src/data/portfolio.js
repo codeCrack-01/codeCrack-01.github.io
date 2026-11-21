@@ -4,19 +4,13 @@ export const personal = {
   phone: "0300-9647682",
   github: "https://github.com/codeCrack-01",
   linkedin: "https://linkedin.com/in/zain-ahmed-27a848381",
-  cgpa: "3.806",
+  cgpa: "3.81",
   university: "LUMS",
   degree: "BS Computer Science",
   batch: "2025 – 2029",
-  taglines: [
-    "Backend Infrastructure",
-    "Distributed Systems",
-    "High-Performance APIs",
-    "ML Engineering",
-    "Linux Enthusiast",
-  ],
+  taglines: ["Backend systems", "Distributed systems", "ML infrastructure"],
   blurb:
-    "Second-year CS undergraduate at LUMS with extensive self-taught experience in enterprise backend systems, distributed architecture, and ML infrastructure. Focused on systems optimization, high-performance API design, and automated verification pipelines.",
+    "CS sophomore at LUMS. I work on backend systems and ML infrastructure, and I am currently doing research under Dr. Abdul Ali Bangash. I also help run the tech side of LRS and build the LRS community portal.",
 };
 
 export const projects = [
@@ -34,6 +28,14 @@ export const projects = [
       { label: "Platform integrations", value: "10+" },
       { label: "Email deliverability checks", value: "9" },
     ],
+  },
+  {
+    title: "LRS Portal",
+    subtitle: "Community platform for LRS",
+    tags: ["Full-Stack", "Community"],
+    desc: "Building the community platform for LRS's Tech & Innovation department — a dashboard and tools for the LRS community. Live for members.",
+    status: "LIVE",
+    url: "https://lrs-portal.vercel.app",
   },
   {
     title: "NockIt",
@@ -139,20 +141,32 @@ export const projects = [
   },
 ];
 
-export const research = {
-  title: "ML Inference Benchmarking Suite",
-  supervisor: "Ahmed Wali (Senior Supervisor)",
-  period: "2025 – Present",
-  role: "Undergraduate Research Collaborator",
-  institution: "LUMS",
-  bullets: [
-    "Contributed to a system predicting model inference performance across diverse target hardware (mobile, server, Jetson Nano, supercomputer) from a single local execution run.",
-    "Engineered a fault-tolerant benchmarking pipeline testing 39 models across ONNX, PyTorch, and TensorFlow Lite, utilizing isolated execution so individual model failures do not abort the global run.",
-    "Designed an extensible folder-structure scaffold allowing modular updates to model configurations without altering core pipeline logic, handling framework-specific preprocessing steps per model.",
-    "Co-produced benchmark comparison visualizations across models and hardware profiles.",
-  ],
-  metric: { value: "39", label: "Models Benchmarked" },
-};
+export const research = [
+  {
+    title: "Upcoming research paper",
+    supervisor: "Dr. Abdul Ali Bangash",
+    period: "2026 – Present",
+    role: "Research Collaborator",
+    institution: "LUMS",
+    bullets: [
+      "Working under Dr. Abdul Ali Bangash on an upcoming research paper.",
+    ],
+  },
+  {
+    title: "ML Inference Benchmarking Suite",
+    supervisor: "Ahmed Wali (Senior Supervisor)",
+    period: "2025 – Present",
+    role: "Undergraduate Research Collaborator",
+    institution: "LUMS",
+    bullets: [
+      "Contributed to a system predicting model inference performance across diverse target hardware (mobile, server, Jetson Nano, supercomputer) from a single local execution run.",
+      "Engineered a fault-tolerant benchmarking pipeline testing 39 models across ONNX, PyTorch, and TensorFlow Lite, utilizing isolated execution so individual model failures do not abort the global run.",
+      "Designed an extensible folder-structure scaffold allowing modular updates to model configurations without altering core pipeline logic, handling framework-specific preprocessing steps per model.",
+      "Co-produced benchmark comparison visualizations across models and hardware profiles.",
+    ],
+    metric: { value: "39", label: "Models Benchmarked" },
+  },
+];
 
 export const experience = [
   {
@@ -250,7 +264,8 @@ export const recognition = [
   "IBM Git & GitHub Certification — https://coursera.org/share/9824efc9aeae0a2b044339d5a11722e7",
   "Packt — Intro to Ruby on Rails — https://www.coursera.org/account/accomplishments/verify/4M3IWFOKQGBU",
   "Udemy — Java Networking: TCP/UDP client-server applications — https://www.udemy.com/certificate/UC-face6696-f33c-4a72-92d0-239eb723c25d/",
-  "National Robotics Engineering Competition (NERC 2026) — Active Competitor",
+  "Participated in the National Robotics Engineering Competition (NERC 2026)",
+  "Coursera — Intermediate Backend Development with FastAPI — https://www.coursera.org/account/accomplishments/verify/C9OZOUTYSXHM",
   `CGPA: ${personal.cgpa}/4.0 @ ${personal.university}`,
 ];
 
@@ -278,6 +293,21 @@ export const researchInterests = [
   "Embedded Systems & Robotics",
 ];
 
+export const activities = [
+  {
+    role: "Assistant Director — Tech & Innovation",
+    org: "LRS",
+    period: "2025 – Present",
+    desc: "Leading the tech side of LRS: building the community portal and tools for members.",
+  },
+  {
+    role: "HackX member",
+    org: "SPADES",
+    period: "2025 – Present",
+    desc: "Participating in hackathons and rapid prototyping with a small team.",
+  },
+];
+
 export const faq = [
   {
     question: "What engineering work is Zain Ahmed Khan open to?",
@@ -297,7 +327,7 @@ export const faq = [
   {
     question: "What is Zain's education and academic standing?",
     answer:
-      "A second-year BS Computer Science student at LUMS (2025–2029) with a 3.806/4.0 CGPA, currently contributing to ML inference benchmarking research.",
+      "A second-year BS Computer Science student at LUMS (2025–2029) with a 3.81/4.0 CGPA, currently contributing to ML inference benchmarking research and working under Dr. Abdul Ali Bangash.",
   },
   {
     question: "Has Zain earned any recognitions or awards?",

@@ -19,6 +19,29 @@
 a { color: var(--color-ink); text-decoration-color: var(--color-accent); text-underline-offset: 0.15em; }
 a:hover { text-decoration-thickness: 2px; }
 a:active, button:active { opacity: 0.75; }
+
+/* Nexus-style drifting bokeh orbs */
+@keyframes nexus-drift-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(60px, -80px) scale(1.15); }
+  66% { transform: translate(-40px, 50px) scale(0.9); }
+}
+@keyframes nexus-drift-b {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-70px, 60px) scale(1.1); }
+  66% { transform: translate(50px, -40px) scale(0.95); }
+}
+@keyframes nexus-drift-c {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, 30px) scale(1.2); }
+}
+.nexus-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  pointer-events: none;
+  will-change: transform;
+}
 .btn { border: var(--rule-hair) solid var(--color-rule); border-radius: var(--radius-pill); padding: var(--space-sm) var(--space-lg); font: 500 var(--text-sm)/1 var(--font-display); color: var(--color-ink); background: var(--color-paper-2); text-decoration: none; box-shadow: 0 1px 2px rgba(0,0,0,0.3); transition: transform var(--dur-micro) var(--ease-out), box-shadow var(--dur-micro) var(--ease-out); }
 .btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
 .btn--primary { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-accent-ink); }

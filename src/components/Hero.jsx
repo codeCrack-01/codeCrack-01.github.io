@@ -10,6 +10,12 @@ export default function Hero() {
 
   return (
     <section style="position:relative;padding-block:var(--section-gap-l);background:var(--color-paper);color:var(--color-ink);overflow:hidden;border-bottom:var(--rule-bar) solid var(--color-rule);">
+      {/* Nexus-style bokeh orbs */}
+      <div class="nexus-orb" style="width:420px;height:420px;top:-120px;left:-80px;background:radial-gradient(circle, rgba(85,255,92,0.45), transparent 70%);animation:nexus-drift-a 18s ease-in-out infinite;" />
+      <div class="nexus-orb" style="width:360px;height:360px;top:40px;right:-60px;background:radial-gradient(circle, rgba(59,130,246,0.35), transparent 70%);animation:nexus-drift-b 22s ease-in-out infinite;" />
+      <div class="nexus-orb" style="width:300px;height:300px;bottom:-80px;left:40%;background:radial-gradient(circle, rgba(168,85,247,0.30), transparent 70%);animation:nexus-drift-c 14s ease-in-out infinite;" />
+      <div class="nexus-orb" style="width:260px;height:260px;bottom:20px;right:20%;background:radial-gradient(circle, rgba(85,255,92,0.25), transparent 70%);animation:nexus-drift-a 26s ease-in-out infinite reverse;" />
+
       <div class="container" style="position:relative;z-index:1;">
         <div style="display:grid;grid-template-columns:5fr 7fr;gap:var(--space-3xl);align-items:center;">
           <div>
@@ -39,7 +45,7 @@ export default function Hero() {
             </p>
           </div>
           <div style="display:flex;justify-content:center;">
-            <div style="width:420px;height:420px;border-radius:50%;overflow:hidden;border-top:3px solid #FFFFFF;border-left:3px solid #FFFFFF;border-right:3px solid #FFFFFF;border-bottom:3px solid transparent;box-shadow:0 8px 32px rgba(0,0,0,0.4);">
+            <div style="width:560px;height:560px;border-radius:50%;overflow:hidden;border-top:3px solid #FFFFFF;border-left:3px solid #FFFFFF;border-right:3px solid #FFFFFF;border-bottom:3px solid transparent;box-shadow:0 0 50px rgba(85,255,92,0.35), 0 12px 40px rgba(0,0,0,0.5);">
               <img src="/me.jpg" alt="Zain Ahmed Khan" style="border-radius:50%;width:100%;height:100%;object-fit:cover;" />
             </div>
           </div>

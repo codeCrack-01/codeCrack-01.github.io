@@ -17,12 +17,12 @@ export default function Hero() {
       <div class="nexus-orb" style="width:260px;height:260px;bottom:20px;right:20%;background:radial-gradient(circle, rgba(85,255,92,0.25), transparent 70%);animation:nexus-drift-a 26s ease-in-out infinite reverse;" />
 
       <div class="container" style="position:relative;z-index:1;">
-        <div style="display:grid;grid-template-columns:5fr 7fr;gap:var(--space-3xl);align-items:center;">
+        <div style="display:grid;grid-template-columns:4fr 8fr;gap:var(--space-3xl);align-items:center;">
           <div>
             <p style="font-family:var(--font-mono, 'JetBrains Mono', monospace);font-size:var(--text-xs);text-transform:uppercase;letter-spacing:0.18em;color:var(--color-accent);margin-bottom:var(--space-lg);">
               Undergraduate Researcher · BSCS @ LUMS
             </p>
-            <h1 style="font-family:'JetBrains Mono', monospace;font-weight:800;font-size:clamp(3rem, 6vw + 1rem, 5rem);color:var(--color-ink);max-width:none;line-height:1.05;">
+            <h1 style="font-family:'Doto', monospace;font-weight:900;font-size:clamp(3.5rem, 7vw + 1rem, 6rem);color:var(--color-ink);max-width:none;line-height:1.0;letter-spacing:0.02em;">
               Zain Ahmed Khan
             </h1>
             <p class="lead" style="margin-top:var(--space-md);color:var(--color-muted);max-width:52ch;">
@@ -45,7 +45,7 @@ export default function Hero() {
             </p>
           </div>
           <div style="display:flex;justify-content:center;">
-            <div style="width:560px;height:560px;border-radius:50%;overflow:hidden;border-top:3px solid #FFFFFF;border-left:3px solid #FFFFFF;border-right:3px solid #FFFFFF;border-bottom:3px solid transparent;box-shadow:0 0 50px rgba(85,255,92,0.35), 0 12px 40px rgba(0,0,0,0.5);">
+            <div style="width:640px;height:640px;margin-left:var(--space-xl);border-radius:50%;overflow:hidden;border-top:3px solid #FFFFFF;border-left:3px solid #FFFFFF;border-right:3px solid #FFFFFF;border-bottom:3px solid transparent;box-shadow:0 0 60px rgba(85,255,92,0.4), 0 16px 50px rgba(0,0,0,0.5);">
               <img src="/me.jpg" alt="Zain Ahmed Khan" style="border-radius:50%;width:100%;height:100%;object-fit:cover;" />
             </div>
           </div>
